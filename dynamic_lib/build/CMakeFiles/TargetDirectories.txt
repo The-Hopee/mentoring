@@ -1,0 +1,6 @@
+/home/tima/mentoring/dynamic_lib/build/CMakeFiles/dynamic_library_usage.dir
+/home/tima/mentoring/dynamic_lib/build/CMakeFiles/edit_cache.dir
+/home/tima/mentoring/dynamic_lib/build/CMakeFiles/rebuild_cache.dir
+/home/tima/mentoring/dynamic_lib/build/lib/CMakeFiles/lib.dir
+/home/tima/mentoring/dynamic_lib/build/lib/CMakeFiles/edit_cache.dir
+/home/tima/mentoring/dynamic_lib/build/lib/CMakeFiles/rebuild_cache.dir

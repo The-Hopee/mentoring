@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/static_library_usage.dir/main.cpp.o -o static_library_usage  lib/liblib.a 
