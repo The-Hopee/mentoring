@@ -1,0 +1,38 @@
+# Build directories
+build/
+cmake-build-debug/
+cmake-build-release/
+out/
+
+# CMake cache
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled binaries and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Ninja
+.ninja_deps
+.ninja_log
+
+# Testing
+Testing/
+
+# Python cache
+__pycache__/
+*.py[cod]
