@@ -6,7 +6,7 @@ include(FetchContent)
 # загружаем либу из локального репозитория
 FetchContent_Declare(
     math
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../math_lib
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/math_lib
 )
 
 # делаем либу доступной
