@@ -26,3 +26,15 @@ target_link_libraries(calculator
                     PRIVATE
                     math
 )
+
+# clang-format target
+add_custom_target(format
+    COMMAND clang-format -i -style=file main.cpp src/interface.cpp include/interface.h
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+# clang-tidy target
+add_custom_target(tidy
+    COMMAND clang-tidy -p ${CMAKE_BINARY_DIR} main.cpp src/interface.cpp
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
