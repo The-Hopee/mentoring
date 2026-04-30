@@ -4,28 +4,71 @@
 
 namespace interface
 {
-    void run(int num1, int num2, const char* operator_)
+    void run(int argc, char** argv)
     {
-        Task task;
-        task.num1 = num1;
-        task.num2 = num2;
-        task.operator_ = operator_;
-        task.status = 1; // default to error
-        makeTask(task);
+        int num1 = 0, num2 = 0;
+        const char* op = NULL;
+        int opt;
+
+        struct option longopts[] = 
+        {
+            {"num1",   required_argument, NULL, '1'},
+            {"num2",   required_argument, NULL, '2'},
+            {"op",     required_argument, NULL, 'o'},
+            {"help",   no_argument,       NULL, 'h'},
+            {NULL,     0,                 NULL, 0}
+        };
+
+        while ((opt = getopt_long(argc, argv, "h", longopts, NULL)) != -1) // -1 indicates the end of options
+        {
+            switch (opt)
+            {
+                case '1':
+                    num1 = strtol(optarg, NULL, 10);
+                    break;
+                case '2':
+                    num2 = strtol(optarg, NULL, 10);
+                    break;
+                case 'o':
+                    op = optarg;
+                    break;
+                case 'h':
+                    printf("Usage: %s --num1 <n1> --num2 <n2> --op <operator>\n", argv[0]);
+                    printf("Example: %s --num1 5 --num2 3 --op x\n", argv[0]);
+                    return;
+                default:
+                    fprintf(stderr, "Error: unknown option\n");
+                    return;
+            }
+        }
+
+        if ((num1 == 0 || num2 == 0 || op == NULL) && strcmp(op, "!") != 0)
+        {
+            fprintf(stderr, "Error: missing required arguments\n");
+        }
+
+        Task task{};
+        
+        makeTask(task, num1, num2, op);
         makeCalculate(task);
         printResult(task);
 
         return;
     }
 
-    void makeTask(Task task)
+    void makeTask(Task& task, int num1, int num2, const char* operator_)
     {
-        if( strcmp(task.operator_, "!") == 0 )
+        if( strcmp(operator_, "!") == 0 )
         {
-            printf("Task created: %d %s\n", task.num1, task.operator_);
+            printf("Task created: %d %s\n", num1, operator_);
             return;
         }
-        printf("Task created: %d %s %d\n", task.num1, task.operator_, task.num2);
+
+        task.num1 = num1;
+        task.num2 = num2;
+        task.operator_ = operator_;
+
+        printf("Task created: %d %s %d\n", num1, operator_, num2);
         return;
     }
 

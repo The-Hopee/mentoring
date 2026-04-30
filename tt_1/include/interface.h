@@ -1,5 +1,8 @@
 #pragma once
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <getopt.h>
 
 struct Task
 {
@@ -12,9 +15,9 @@ struct Task
 
 namespace interface
 {
-    void run(int num1, int num2, const char* operator_);
+    void run(int argc, char** argv);
 
-    void makeTask(Task);
+    void makeTask(Task&, int, int, const char*);
     void makeCalculate(Task&);
     void printResult(const Task&);
 }
