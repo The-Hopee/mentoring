@@ -35,6 +35,7 @@ add_custom_target(format
 
 # clang-tidy target
 add_custom_target(tidy
-    COMMAND clang-tidy -p ${CMAKE_BINARY_DIR} main.cpp src/interface.cpp
+    COMMAND clang-tidy -p ${CMAKE_BINARY_DIR} -extra-arg=-I${CMAKE_CURRENT_SOURCE_DIR}/include -extra-arg=-I${CMAKE_CURRENT_SOURCE_DIR}/math_lib main.cpp src/interface.cpp
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    DEPENDS calculator
 )
