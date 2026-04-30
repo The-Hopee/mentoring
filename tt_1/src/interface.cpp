@@ -48,12 +48,27 @@ void makeTask(Task& task, int argc, char** argv) {
         }
     }
 
-    if ((num1 == 0 || num2 == 0 || op == NULL) && strcmp(op, "!") != 0) {
+    if (op == NULL) {
         fprintf(stderr, "Error: missing required arguments\n");
+        task.status = 1;
+        return;
     }
 
     if (strcmp(op, "!") == 0) {
+        if (num1 == 0) {
+            fprintf(stderr, "Error: missing required argument for factorial\n");
+            task.status = 1;
+            return;
+        }
         printf("Task created: %d %s\n", num1, op);
+        task.num1 = num1;
+        task.operator_ = op;
+        return;
+    }
+
+    if (num1 == 0 || num2 == 0) {
+        fprintf(stderr, "Error: missing required arguments\n");
+        task.status = 1;
         return;
     }
 
@@ -66,6 +81,10 @@ void makeTask(Task& task, int argc, char** argv) {
 }
 
 void makeCalculate(Task& task) {
+    if (task.status != 0 || task.operator_ == NULL) {
+        return;
+    }
+
     int ans = 0;
 
     switch (*task.operator_) {
@@ -99,6 +118,10 @@ void makeCalculate(Task& task) {
 }
 
 void printResult(const Task& task) {
+    if (task.operator_ == NULL) {
+        return;
+    }
+
     if (task.status == 0) {
         if (strcmp(task.operator_, "!") == 0) {
             printf("Result: %d! = %d\n", task.num1, task.result);
