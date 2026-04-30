@@ -17,7 +17,7 @@ namespace interface
 {
     void run(int argc, char** argv);
 
-    void makeTask(Task&, int, int, const char*);
+    void makeTask(Task&, int, char**);
     void makeCalculate(Task&);
     void printResult(const Task&);
 }

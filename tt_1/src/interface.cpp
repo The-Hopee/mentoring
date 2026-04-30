@@ -6,6 +6,17 @@ namespace interface
 {
     void run(int argc, char** argv)
     {
+        Task task{};
+        
+        makeTask(task, argc, argv);
+        makeCalculate(task);
+        printResult(task);
+
+        return;
+    }
+
+    void makeTask(Task& task, int argc, char** argv)
+    {
         int num1 = 0, num2 = 0;
         const char* op = NULL;
         int opt;
@@ -47,28 +58,17 @@ namespace interface
             fprintf(stderr, "Error: missing required arguments\n");
         }
 
-        Task task{};
-        
-        makeTask(task, num1, num2, op);
-        makeCalculate(task);
-        printResult(task);
-
-        return;
-    }
-
-    void makeTask(Task& task, int num1, int num2, const char* operator_)
-    {
-        if( strcmp(operator_, "!") == 0 )
+        if( strcmp(op, "!") == 0 )
         {
-            printf("Task created: %d %s\n", num1, operator_);
+            printf("Task created: %d %s\n", num1, op);
             return;
         }
 
         task.num1 = num1;
         task.num2 = num2;
-        task.operator_ = operator_;
+        task.operator_ = op;
 
-        printf("Task created: %d %s %d\n", num1, operator_, num2);
+        printf("Task created: %d %s %d\n", num1, op, num2);
         return;
     }
 
