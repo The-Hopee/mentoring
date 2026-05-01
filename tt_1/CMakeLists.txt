@@ -3,10 +3,11 @@ project(calculator)
 
 include(FetchContent)
 
-# загружаем либу из локального репозитория
+# загружаем либу с GitHub
 FetchContent_Declare(
     math
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../math_lib
+    GIT_REPOSITORY https://github.com/The-Hopee/math_lib.git
+    GIT_TAG main
 )
 
 # делаем либу доступной

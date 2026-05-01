@@ -1,8 +1,5 @@
 #include "interface.h"
 
-#include <math.h>
-#include <string.h>
-
 namespace interface {
 void run(int argc, char** argv) {
     Task task{};
