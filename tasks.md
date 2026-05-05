@@ -7,8 +7,7 @@
     `while(str[i]) {`
         `++i;`
     `}`
-    
-    `return i;`
+    `return i;` 
 `}`
 
 # Задача 2: на переполнение типов данных
@@ -22,7 +21,6 @@
     `{`
         `std::cout << "a"; // 256 "a"`
     `}`
-
     `unsigned char h = 128;`
     `for (unsigned char i = 0; i < 2 * h; ++i) расширение типов!`
     `{`
