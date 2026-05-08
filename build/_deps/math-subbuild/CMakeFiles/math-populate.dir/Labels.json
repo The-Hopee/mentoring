@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/CMakeFiles/math-populate"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/CMakeFiles/math-populate.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/CMakeFiles/math-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-build.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-download.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-install.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-test.rule"
+		},
+		{
+			"file" : "/home/tima/mentoring/tt_2/build/_deps/math-subbuild/math-populate-prefix/src/math-populate-stamp/math-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"math-populate"
+		],
+		"name" : "math-populate"
+	}
+}

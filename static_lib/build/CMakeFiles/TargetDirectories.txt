@@ -1,6 +1,0 @@
-/home/tima/mentoring/static_lib/build/CMakeFiles/static_library_usage.dir
-/home/tima/mentoring/static_lib/build/CMakeFiles/edit_cache.dir
-/home/tima/mentoring/static_lib/build/CMakeFiles/rebuild_cache.dir
-/home/tima/mentoring/static_lib/build/lib/CMakeFiles/lib.dir
-/home/tima/mentoring/static_lib/build/lib/CMakeFiles/edit_cache.dir
-/home/tima/mentoring/static_lib/build/lib/CMakeFiles/rebuild_cache.dir

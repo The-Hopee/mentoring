@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/calculator.dir/main.cpp.o CMakeFiles/calculator.dir/src/interface.cpp.o -o calculator  _deps/spdlog-build/libspdlog.a 

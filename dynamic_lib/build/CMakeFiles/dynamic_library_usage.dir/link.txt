@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/dynamic_library_usage.dir/main.cpp.o -o dynamic_library_usage  -Wl,-rpath,/home/tima/mentoring/dynamic_lib/build/lib lib/liblib.so 
