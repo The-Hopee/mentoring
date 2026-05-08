@@ -1,0 +1,13 @@
+---
+Checks: >
+  *,
+  -llvmlibc-*,
+  -fuchsia-*,
+  -zircon-*,
+  -objc-*,
+  -abseil-*,
+  -altera-*,
+  -amino-*,
+  -darwin-*
+HeaderFilterRegex: '.*'
+FormatStyle: 'file'
