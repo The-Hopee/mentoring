@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/calculator_test.dir/tests/test_calculator.cpp.o CMakeFiles/calculator_test.dir/src/interface.cpp.o -o calculator_test  _deps/spdlog-build/libspdlog.a lib/libgtest_main.a lib/libgtest.a 

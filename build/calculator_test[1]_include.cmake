@@ -1,5 +1,0 @@
-if(EXISTS "/home/tima/mentoring/tt_2/build/calculator_test[1]_tests.cmake")
-  include("/home/tima/mentoring/tt_2/build/calculator_test[1]_tests.cmake")
-else()
-  add_test(calculator_test_NOT_BUILT calculator_test_NOT_BUILT)
-endif()
